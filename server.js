@@ -25,7 +25,7 @@ var server = http.createServer(function(request, response){
   if(path === '/'){
     response.statusCode = 200
     response.setHeader('Content-Type', 'text/html;charset=utf-8')
-    response.write(`成功访问首页啦`)
+    response.write(`成功访问首页啦，开心呜呼`)
     response.end()
   } else if(path === '/x'){
     response.statusCode = 200
