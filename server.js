@@ -25,7 +25,8 @@ var server = http.createServer(function(request, response){
   if(path === '/'){
     response.statusCode = 200
     response.setHeader('Content-Type', 'text/html;charset=utf-8')
-    response.write(`成功访问首页啦，开心呜呼`)
+    response.write(`    <link rel="stylesheet" href="/z">
+                        <h1>成功访问首页啦，开心呜呼</h1>`)
     response.end()
   } else if(path === '/x'){
     response.statusCode = 200
@@ -36,6 +37,11 @@ var server = http.createServer(function(request, response){
     response.statusCode = 200
     response.setHeader('Content-Type', 'text/html;charset=utf-8')
     response.write(`这里是路径Y`)
+    response.end()
+  } else if(path === '/z'){
+    response.statusCode = 200
+    response.setHeader('Content-Type', 'text/css;charset=utf-8')
+    response.write(`h1{color:red}`)
     response.end()  
   } else {
     response.statusCode = 404
